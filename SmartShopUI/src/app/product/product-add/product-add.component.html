@@ -1,0 +1,115 @@
+<div class="jumbotron bg-image">
+<div class="container mb-4 pb-4 " style="margin-top:10% ;" *ngIf="!productupdated else displayForm">
+    <h2 class="heading">Add new product</h2>
+    <br>
+    <form class="needs-validation" [formGroup]="editForm" (submit)="onSubmitForm()">
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-3">
+                <label for="name">Product Code</label>
+                <input type="text" class="form-control" id="productCode" formControlName="productCode">
+                <label for="name">Product Name</label>
+                <input type="text" class="form-control" id="productName" formControlName="productName">
+                <div class="validation-error"
+                    *ngIf="editForm.get('productName').touched && editForm.get('productName').hasError('required')">
+                    Item Name is required
+                </div>
+                <div class="validation-error"
+                    *ngIf="editForm.get('productName').touched && editForm.get('productName').hasError('maxlength')">
+                    Item Name cannot exceed 200 characters
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group  col-md-12 mb-3">
+                <label for="image">Image URL</label>
+                <input type="text" class="image form-control" id="name" formControlName="image">
+                <div class="validation-error"
+                    *ngIf="editForm.get('image').touched && editForm.get('image').hasError('required')">
+                    Image URL is required
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3 mb-3">
+                <label for="validationServer033">Price</label>
+                <input type="text" class="form-control" id="rate" formControlName="rate">
+                <div class="validation-error"
+                    *ngIf="editForm.get('rate').touched && editForm.get('rate').hasError('required')">
+                    Price is required
+                </div>
+                <div class="validation-error"
+                    *ngIf="editForm.get('rate').touched && editForm.get('rate').hasError('pattern')">
+                    Price can only contain numbers.
+                </div>
+            </div>
+            <div class="form-group col-md-3 mb-3">
+                <label for="manufactuerDate">Date of Manufacture</label>
+                <input type="text" class="form-control" id="manufactureDate" formControlName="manufactureDate"
+                    placeholder="yyyy-mm-dd">
+            </div>
+            <div class="form-group col-md-3 mb-3">
+                <label for="expiryDate">Date of Expiry</label>
+                <input type="text" class="form-control" id="expiryDate" formControlName="expiryDate"
+                    placeholder="yyyy-mm-dd">
+            </div>
+            <div class="form-group col-md-3 mb-3">
+                <label for="date">Date of Stock</label>
+                <input type="text" class="form-control" id="date" formControlName="date" placeholder="yyyy-mm-dd">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3 mb-3">
+                <label for="validationServer033">Brand</label>
+                <input type="text" class="form-control" id="brand" formControlName="brand">
+                <div class="validation-error"
+                    *ngIf="editForm.get('brand').touched && editForm.get('brand').hasError('required')">
+                    Price is required
+                </div>
+            </div>
+            <div class="form-group col-md-3 mb-3">
+                <label for="validationServer033">Aisle</label>
+                <input type="text" class="form-control" id="brand" formControlName="aisle">
+                <div class="validation-error"
+                    *ngIf="editForm.get('aisle').touched && editForm.get('aisle').hasError('required')">
+                    aisle is required
+                </div>
+            </div>
+            <div class="form-group col-md-3 mb-3">
+                <label for="validationServer033">Shelf</label>
+                <input type="text" class="form-control" id="shelf" formControlName="shelf">
+                <div class="validation-error"
+                    *ngIf="editForm.get('shelf').touched && editForm.get('shelf').hasError('required')">
+                    shelf is required
+                </div>
+            </div>
+            <div class="form-group col-md-3 mb-3">
+                <label for="validationServer033">Stock</label>
+                <input type="number" class="form-control" id="stock" formControlName="stock">
+                <div class="validation-error"
+                    *ngIf="editForm.get('stock').touched && editForm.get('stock').hasError('required')">
+                    Price is required
+                </div>
+                <div class="validation-error"
+                    *ngIf="editForm.get('stock').touched && editForm.get('stock').hasError('pattern')">
+                    Price can only contain numbers.
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-3 mb-3">
+            <label for="validationServer033">Product Type</label>
+            <input type="text" class="form-control" id="productType" formControlName="productType">
+            <div class="validation-error"
+                *ngIf="editForm.get('productType').touched && editForm.get('productType').hasError('required')">
+                Product Type is required
+            </div>
+        </div>
+
+        <button class="btn login text-white save" type="submit" >Save</button>
+    </form>
+</div>
+</div>
+<ng-template #displayForm class="bg-image">
+    <div class="alert alert-success" style="margin-top:10%; margin-left: 30%;margin-right: 30%;">Product details Added successfully.
+    </div>
+    <a class="btn btn-primary" routerLink="/productdetails" style="margin-left: 60%;">Go To Products</a>
+</ng-template>

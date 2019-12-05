@@ -1,0 +1,63 @@
+.edit{
+    margin-left: 40%;
+}
+
+.card-deck .card {
+	/* padding-bottom:10px; */
+	width: 18rem;
+}
+
+.container-fluid {
+	margin-left: 80px;
+	margin-top: 80px;
+	align-content: center;
+}
+
+.icon-size {
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+#testname {
+	white-space: normal;
+}
+.card-deck .card {
+    /* padding-bottom:10px; */
+    width: 20rem;
+}
+
+.card-img-top{
+    height: 15rem;
+}
+
+
+
+.card-subtitle {
+	padding: 16px 0px 16px 0px;
+	font-size: 12px;
+}
+
+.card-text {
+	font-size: 14px;
+}
+
+.veralign {
+	vertical-align: middle;
+}
+
+
+#badge-free {
+	vertical-align: top;
+}
+
+.moreDetails{
+    color:rgb(44, 6, 94);
+}
+.card-data{
+    color: rgb(102, 90, 90);
+}
+.bg-image{
+    background-image: url("https://3.bp.blogspot.com/-vIt6wvPi6yY/XIRdAsyImbI/AAAAAAAAM5U/IYIK9MfpY2MAlv-UMcAh4l0iYLkkWBj2gCHMYCw/s1600/black-and-white-pattern-%25E2%259D%25A4-4k-hd-desktop-wallpaper-for-4k-ultra-hd.jpg");
+    color: #ffff;
+    min-height: 700px ;
+}

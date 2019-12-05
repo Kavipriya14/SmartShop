@@ -1,0 +1,202 @@
+
+<div class=" jumbotron mt-4 bg-image">
+
+        <div class="container signup-form">
+          <div class="row">
+            <form class=" form border p-5" [formGroup]="signupForm" (submit)="onSubmitSignUp()">
+      
+              <!-- Form Name -->
+              <p class="h3 mb-5 registration-name">Registration</p>
+      
+              <!-- Text input-->
+              <div class="row ">
+                <div class="control-group ml-3">
+                  <label class="control-label" for="first_name">First Name</label>
+                  <input type="text" id="first_name" class="form-control mb-3" placeholder="Enter First Name"
+                    formControlName="firstname">
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('firstname').touched && signupForm.get('firstname').hasError('required')">
+                    First Name is required
+                  </div>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('firstname').touched && signupForm.get('firstname').hasError('pattern')">
+                    First Name cannot have numbers
+                  </div>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('firstname').touched && signupForm.get('firstname').hasError('maxlength')">
+                    First Name cannot exceed 50 characters
+                  </div>
+                </div>
+      
+                <!-- Text input-->
+                <div class="control-group ml-3">
+                  <label class="control-label" for="last_name">Last Name</label>
+                  <input id="last_name" name="last_name" placeholder="Enter Your Last name" class="form-control mb-3"
+                    type="text" formControlName="lastname">
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('lastname').touched && signupForm.get('lastname').hasError('required')">
+                    Last Name is required
+                  </div>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('lastname').touched && signupForm.get('lastname').hasError('pattern')">
+                    Last Name cannot have numbers
+                  </div>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('lastname').touched && signupForm.get('lastname').hasError('maxlength')">
+                    Last Name cannot exceed 50 characters
+                  </div>
+                </div>
+              </div>
+      
+              <div class="row">
+              <div class="form-group ml-3">
+                
+                <label for="age">Age </label>
+                <input id="age" name="age" placeholder="Enter your age" class="form-control mb-3" type="number`"
+                  formControlName="age">
+                <div class="validation-error"
+                  *ngIf="signupForm.get('age').touched && signupForm.get('age').hasError('required')">
+                  Age is required
+                </div>
+              </div>
+      
+              <div class="control-group ml-3">
+                <label class="control-label" for="gender">Gender</label>
+                <div class="controls">
+                  <select id="gender" name="gender" class="form-control mb-3" formControlName="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('gender').touched && signupForm.get('gender').hasError('required')">
+                    Gender is required
+                  </div>
+                </div>
+              </div>
+              </div>
+      
+              <div class="row">
+              <div class="control-group ml-3">
+                <label class="control-label" for="contact">Contact No.</label>
+                <div class="controls">
+                  <input id="contact" name="contact" placeholder="Enter Your Contact Number" class="form-control mb-3"
+                    type="text" formControlName="contact">
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('contact').touched && signupForm.get('contact').hasError('required')">
+                    Contact is required
+                  </div>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('contact').touched && signupForm.get('contact').hasError('max')">
+                    Enter Valid Mobile Number
+                  </div>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('contact').touched && signupForm.get('contact').hasError('min')">
+                    Enter Valid Mobile Number and mobile number Not less than 10 Characters
+                  </div>
+                </div>
+              </div>
+      
+              <div class="control-group ml-3">
+                
+                <label class="control-label" for="userId">User Name</label>
+                <input id="userId" name="contact" placeholder="Enter Your User ID" class="form-control mb-3" type="text"
+                  formControlName="userid">
+                <div class="validation-error"
+                  *ngIf="signupForm.get('userid').touched && signupForm.get('userid').hasError('required')">
+                  Username is required
+                </div>
+                <div class="validation-error"
+                  *ngIf="signupForm.get('userid').touched && signupForm.get('userid').hasError('maxlength')">
+                  Username cannot exceed 20 characters
+                </div>
+              </div>
+              </div>
+              <div class="row">
+              <div class="control-group ml-3">
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                  <input id="password" placeholder="Enter Password" class="form-control mb-3" type="password"
+                    formControlName="password">
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('password').touched && signupForm.get('password').hasError('required')">
+                    Password is required
+                  </div>
+                </div>
+              </div>
+              <div class="control-group ml-3">
+                <label class="control-label" for="confirmpassword">Confirm Password</label>
+                <div class="controls">
+                  <input id="confirmpassword" placeholder="Enter Password" class="form-control mb-3" type="password"
+                    formControlName="confirmpassword">
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('confirmpassword').touched && signupForm.get('confirmpassword').hasError('required')">
+                    Confirm Password is required
+                  </div>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('confirmpassword').touched && signupForm.get('confirmpassword').hasError('nomatch')">
+                    Password and Confirm Password does not match
+                  </div>
+                </div>
+              </div>
+      </div>
+              <!-- Text input-->
+            
+              <div class="control-group">
+                <label class="control-label" for="userType">User Type</label>
+                <div class="controls">
+                  <select id="userType" class="form-control mb-3" formControlName="userType">
+                    <option>Select Type of User</option>
+                    <option value="U">User</option>
+                    <option value="A">Manager</option>
+                  </select>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('userType').touched && signupForm.get('userType').hasError('required')">
+                    userType is required
+                  </div>
+                </div>
+              </div>
+           
+           
+              <div class="control-group">
+                <label class="control-label" for="secret">Secret Question</label>
+                <div class="controls">
+                  <select id="secret" name="secret" class="form-control mb-3" formControlName="secretQuestion" required>
+            
+                    <option value="Who is your favorite film star?">1.Who is your favorite film star?</option>
+                    <option value="What is your pet name?">2.What is your pet name?</option>
+                    <option value="What is your childhood dream?">3.What is your childhood dream?</option>
+                  </select>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('secretQuestion').touched && signupForm.get('secretQuestion').hasError('required')">
+                    Security Question is required
+                  </div>
+                </div>
+              </div>
+            
+           
+              <div class="control-group">
+                <label class="control-label" for="contact">Answer</label>
+                <div class="controls">
+                  <input id="answer" placeholder="Enter Your Answer" class="form-control mb-3" type="text"
+                    formControlName="answer" required>
+                  <div class="validation-error"
+                    *ngIf="signupForm.get('answer').touched && signupForm.get('answer').hasError('required')">
+                    Answer is required
+                  </div>
+                </div>
+              </div>
+            
+             
+              <div class="col-12 mt-2" *ngIf="formSubmitted">
+                <div class="alert alert-success alert-dismissible fade show alert-msg" role="alert">
+                  Submitted Successfully
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </div>
+              <button class="btn text-white signup" type="submit">Signup</button>
+            </form>
+          </div>
+        </div>
+      </div>

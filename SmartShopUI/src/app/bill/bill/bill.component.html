@@ -1,0 +1,80 @@
+<div class="jumbotron bg-image">
+<h1 class="heading">Billing</h1>
+<br>
+<div class="ml-4 mb-4 pb-4 card border-secondary" style="width:50%; padding:1%;" >
+    <form (submit)="onSubmitForm(billForm)" #billForm="ngForm">
+        <div class="form-row">
+            <div class="form-group col-md-3 mb-3">
+                <label for="name">User Id</label>
+                <input type="hidden" class="form-control"  [(ngModel)]="purchaseId" [value]="purchaseId"  name="purchaseId" >
+                <input type="text" class="form-control" id="userId" ngModel name="userId" #userId="ngModel">
+            </div>
+            <div class="form-group col-md-4 mb-3">
+                <label for="name">Date</label>
+                <input type="date" class="form-control" id="date" ngModel name="date" #date="ngModel" >
+            </div>
+            
+        </div>
+        <button class="btn login text-white button" type="submit" >Update</button>
+    </form>
+</div> 
+<div class="card ml-4 mr-4">
+<table class="table table-bordered table-striped" style="margin: auto;">
+    <thead>
+    <tr>
+        <th >Product Type</th>
+        <th >Product Name</th>
+        <th >Product Code</th>
+        <th >Quantity</th>
+        <th >Amount</th>
+        <th >Submit</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of purchasedData">
+        <td *ngIf="isPurchasedData">{{p.type}}</td>
+        <td *ngIf="isPurchasedData" >{{p.name}}</td>
+        <td *ngIf="isPurchasedData" >{{p.code}}</td>
+        <td *ngIf="isPurchasedData" >{{p.quan}}</td>
+        <td *ngIf="isPurchasedData">{{p.total}}</td>
+        <td *ngIf="isPurchasedData">Submitted</td>
+    </tr>
+
+    <tr>
+        <td >
+            <select [(ngModel)]="productType" (change)="getproductNames($event)">
+                <option *ngFor="let type of productTypes" [value]="type"> {{type}}</option>
+            </select>
+        </td>
+        <td >
+            <select [(ngModel)]="prodName" (change)="getproductName($event)">
+                <option *ngFor="let name of productNames" [value]="name"> {{name}}</option>
+            </select>
+        </td>
+        <td >
+            <input type="text" placeholder="enter product code" [value]="productCode">
+        </td>
+        <td >
+            <input type="number" placeholder="enter Quantity" [(ngModel)]="quantity" (input)="amountupdate($event)">
+        </td>
+        <td >
+            <p>{{total}}</p>
+        </td>
+        <td>
+            <button class="btn btn-primary button" (click)=add() style="width:60%;">Add</button>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td >{{billTotal}}</td>
+        <td >
+            <button class="btn btn-primary button" (click)=submitBill()>Submit</button>
+        </td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>

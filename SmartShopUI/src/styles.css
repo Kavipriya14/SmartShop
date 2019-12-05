@@ -1,0 +1,146 @@
+/* FONT  */
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Raleway', sans-serif;
+}
+/* 	Navbar */
+nav, nav a {
+	color: #ffffff;
+	background-color: #140f0d;
+}
+
+a:HOVER {
+	color: #fff;
+}
+
+h5, h6 {
+	color: #a1a1a1;
+}
+
+.rupees {
+	float: right;
+}
+
+
+.active-class {
+	float: left;
+	vertical-align: middle;
+}
+
+.offer {
+	float: right;
+}
+
+.cart {
+	float: right;
+}
+
+.delivery {
+	color: blue;
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+.new-user {
+	float: right;
+}
+.login-form {
+	top:-50px;
+    width:50%;
+	right:calc(50% - 50px);
+	height:500px;
+	box-shadow: 0 0 15px 9px #00000096;
+   position: absolute;
+	 background-color:rgb(241, 234, 234);
+	max-width: 400px;
+	margin-left:30% ;
+
+}
+
+.signup-form {
+	
+	max-width: 600px;
+	margin: 60px auto;
+	margin-top: 0;
+}
+
+.text-down {
+	vertical-align: text-bottom;
+}
+
+/* MENU ITEM LIST */
+
+/* ! CARD CSS */
+.card-deck .card {
+	/* padding-bottom:10px; */
+	width: 18rem;
+}
+
+.container-fluid {
+	margin-left: 80px;
+	margin-top: 80px;
+	align-content: center;
+}
+
+.icon-size {
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+#testname {
+	white-space: normal;
+}
+
+.card-subtitle {
+	padding: 16px 0px 16px 0px;
+	font-size: 12px;
+}
+
+.card-text {
+	font-size: 14px;
+}
+
+.veralign {
+	vertical-align: middle;
+}
+
+.add-to-cart .btn-success, .edit-cards .btn-success, .submit .btn-success
+	{
+	background-color: #942929;
+	border: 0px;
+}
+
+#badge-free {
+	vertical-align: top;
+}
+
+#dateofLaunch {
+	font-size: 12px;
+	vertical-align: top;
+}
+
+#icon-shipping {
+	color: #1e90ff;
+}
+
+/* CART */
+.delete-icon-size {
+	font-size: 2rem;
+}
+/* 	Footer */
+.footer {
+	position:fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #0c0706;
+	color: white;
+}

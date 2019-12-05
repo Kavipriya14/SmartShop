@@ -1,0 +1,31 @@
+.form{
+    color: #fff;
+    background-color: rgb(7, 7, 7);
+}
+.validation-error {
+    color:red;
+    font: bold;
+}
+.registration-name{
+    font: bold;
+    text-align: center;
+}
+.signup{
+    background-color:  #a70404;
+   
+}
+.bg-image {
+    background-image:
+        url("https://st4.depositphotos.com/1003821/20935/i/1600/depositphotos_209357562-stock-photo-small-orange-pumpkins-isolated-white.jpg");
+    
+  
+    background-repeat:no-repeat;
+    background-size: 100% 120%;
+    position:relative;
+}
+.signup-form {
+	
+	max-width: 600px;
+	margin: 60px auto;
+	margin-top: 0;
+}

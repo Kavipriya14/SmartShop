@@ -1,0 +1,42 @@
+<div class="jumbotron bg-image">
+<h2 class="heading">Pending requests</h2>
+<br>
+<div  class="alert alert-secondary mt-4 pt-4 col-12 col-md-12 col-lg-6" style="margin-left: 26%; text-align:center;" *ngIf="!pendingDetails else pendingItems"> <span class="mt-4 pt-4">No pending Requests </span>
+</div >
+
+  <ng-template #pendingItems>
+<div class="card">
+    <div class="row">
+        <div class="col-sm-2">
+            <b> FirstName</b>
+            </div>
+            <div class="col-sm-2">
+                <b> LastName</b>
+                </div>
+                <div class="col-sm-2">
+                    <b> UserId</b>
+                    </div>
+                    <div class="col-sm-2">
+                        <b> ContactNumber</b>
+                    </div>
+                    <div class="col-sm-2">
+                        <b>   Approve</b>
+                        </div>
+                        <div class="col-sm-2">
+                            <b>Deny</b>
+                            </div>
+</div>
+
+</div>
+<br>
+        <app-pending-managers *ngFor="let user of users" 
+            
+            [userinput]="user"
+            (userId)="approve($event)"
+            (userIddeny)="deny($event)"
+            
+          ></app-pending-managers>
+          <br>
+        </ng-template>
+      </div>
+      

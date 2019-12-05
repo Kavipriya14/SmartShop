@@ -1,0 +1,47 @@
+<div class="bg-image jumbotron mt-4"> 
+
+       
+        
+        <div class="container">
+            <div>
+                <br>
+            <h2 class="centre">Find Your Shopping List At Ease With Smart Buy!!</h2>
+           <br>
+            <h4 class="centre">Enjoy Shopping!</h4>
+            
+        </div>
+            <div class="row">
+                <div class="imgbox "><a class="nav-link" routerLink="about">
+                    <div id="cat1" class="catimage" ></div>
+                        <br>
+                        <div><h2 class="centre ml-3">About</h2></div>
+                    </a>
+                </div>
+               
+                <li class="nav-item" *ngIf="!isLoggedIn()">
+                    
+                <div class="imgbox">    <a class="nav-link" routerLink="login/register">
+                    <div id="cat2" class="catimage" ></div>
+                    <br>
+                    <div><h2 class="centre ml-3">Register</h2></div>
+                     </a>
+                 </div>
+                
+                        
+                    </li>
+                    <li class="nav-item" *ngIf="!isLoggedIn()">
+                <div class="imgbox"><a class="nav-link" routerLink="login">
+                    <div id="cat3" class="catimage" ></div>
+                    <br>
+                    <div><h2  class="centre ml-3">Login</h2></div>
+                </a></div>
+               
+                        
+                    </li>
+            </div>
+           
+        </div>
+        </div>
+        
+        
+        <router-outlet></router-outlet>

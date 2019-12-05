@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md fixed-top mb-4">
+    <a class="navbar-brand" href="#">
+      <img class="image" src="https://ak7.picdn.net/shutterstock/videos/8488747/thumb/10.jpg" height=10% width=10%> SmartBuy</a>
+    <button class="navbar-toggler navbar-dark" type="button"
+      data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="!isLoggedIn()">
+          <a class="nav-link" routerLink="login/register">Register</a>
+      </li>
+        <li class="nav-item" *ngIf="!isLoggedIn()">
+          <a class="nav-link" routerLink="login">Log In</a>
+      </li>
+      <li  class="nav-item" *ngIf="isSuperUser()">
+          <a class="nav-link" routerLink="pendingdetails">Pending Requests</a>
+      </li>  
+      <li  class="nav-item" *ngIf="isShopManager()">
+        <a class="nav-link" routerLink="addProduct">Add Product</a>
+    </li>  
+    <li class="nav-item" *ngIf="!isShopManager() && !isSuperUser() && isLoggedIn()">
+        <a class="nav-link" routerLink="purchaseHistory">Purchase History</a>
+      </li>
+      <li class="nav-item" *ngIf="isShopManager()">
+          <a class="nav-link" routerLink="billing">Billing</a>
+        </li>
+      <li class="nav-item" *ngIf="isLoggedIn()"><a class="nav-link" href="#">
+          <span><i class="material-icons cart-icon"
+            style="color: #ffffff; font-size: 18px">person</i></span>{{getUser()}}
+      </a></li>  
+      <li  class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link"  href="#" (click)="onSignOut()">LogOut</a>
+      </li>  
+      </ul>
+    </div>
+  </nav>
+  
+  <router-outlet></router-outlet>
+

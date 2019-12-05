@@ -1,0 +1,10 @@
+.bg-image{
+    background-image: url("https://3.bp.blogspot.com/-vIt6wvPi6yY/XIRdAsyImbI/AAAAAAAAM5U/IYIK9MfpY2MAlv-UMcAh4l0iYLkkWBj2gCHMYCw/s1600/black-and-white-pattern-%25E2%259D%25A4-4k-hd-desktop-wallpaper-for-4k-ultra-hd.jpg");
+ 
+    min-height: 700px ;
+    background-size: 100% 110%;
+}
+.heading{
+    color: #ffff;
+    text-align: center;
+}

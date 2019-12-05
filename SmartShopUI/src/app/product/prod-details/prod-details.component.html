@@ -1,0 +1,23 @@
+<div class="jumbotron bg-image">
+<app-search></app-search>
+
+<div class="form-group" style="margin-left:5%;margin-right:5% ;">
+  <h3 for="sel1"><b>Sort By:</b></h3>
+  <div>
+   
+  <select class="form-control" id="sel1" [(ngModel)]="sortkey" (change)="sort($event)">
+      
+    <option value="name">Name</option>
+    <option value="price">Price</option>
+    <option value="availability">Availability</option>
+  </select>
+</div>
+</div>
+
+<div class="row ">
+  <app-product-info *ngFor="let pro of allProducts" 
+  [product]="pro"
+  class="col-12 col-md-6 col-lg-3"></app-product-info>
+  </div>
+</div>
+  

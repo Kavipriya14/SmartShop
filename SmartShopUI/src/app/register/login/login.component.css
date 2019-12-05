@@ -1,0 +1,49 @@
+.bg-image{
+    background-image: url("https://3.bp.blogspot.com/-vIt6wvPi6yY/XIRdAsyImbI/AAAAAAAAM5U/IYIK9MfpY2MAlv-UMcAh4l0iYLkkWBj2gCHMYCw/s1600/black-and-white-pattern-%25E2%259D%25A4-4k-hd-desktop-wallpaper-for-4k-ultra-hd.jpg");
+   
+    min-height: 700px ;
+    background-size: 100% 110%;
+}
+.validation-error{
+    color:red;
+}
+.login-form {
+	top:-50px;
+    width:50%;
+	right:calc(50% - 50px);
+	height:500px;
+	box-shadow: 0 0 15px 9px #00000096;
+   position: absolute;
+   
+	 background-color:rgb(241, 234, 234);
+	max-width: 400px;
+	margin-left:30% ;
+
+}
+.login-reg-panel{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width:70%;
+    margin-left: 20%;
+	margin-top: 25%;
+    height:400px;
+    
+    background-color: rgba(236, 48, 20, 0.9);
+}
+.register{
+    background-color:rgb(2, 2, 2)
+}
+.login {
+	background-color: #a70404;
+}
+.register-info-box{
+   color: #ffff;
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    right:0;
+    position:absolute;
+    text-align:left;
+    
+}

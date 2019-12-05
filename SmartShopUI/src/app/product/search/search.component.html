@@ -1,0 +1,10 @@
+<div class="bg-image jumbotron ">
+    <h1>Search Products</h1>
+    <div class="input-group">
+        <div>
+            <span class="input-group-text cyan lighten-2"><i class="material-icons">shopping_cart </i></span>
+        </div>
+        <input type="text" class="form-control" placeholder="Search Products" aria-label="Search"
+            [(ngModel)]="searchkey" (input)="search($event)">
+    </div>
+</div>

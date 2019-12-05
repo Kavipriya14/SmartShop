@@ -1,0 +1,24 @@
+
+<div class="card"  (submit)="onSubmit()">
+    <div class="row">
+            <div class="col-sm-2">
+                {{userinput.firstname}}
+            </div>
+            <div class="col-sm-2">
+                   {{userinput.lastname}}
+                </div>
+                <div class="col-sm-2">
+                       {{userinput.userid}}
+                    </div>
+                    <div class="col-sm-2">
+                            {{userinput.contact}}
+                         </div>
+                    <div class="col-sm-2">
+                            <button class="btn btn-primary" type="submit" (click)="approve(userinput.userid)">APPROVE</button>
+                        </div>
+                        <div class="col-sm-2">
+                                <button class="btn btn-danger" type="submit" (click)="deny(userinput.userid)" >Deny</button>
+                            </div>
+    </div>
+</div>
+<br>
